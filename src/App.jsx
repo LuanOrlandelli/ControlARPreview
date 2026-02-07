@@ -17,7 +17,7 @@ function App() {
       {!semCabecalho && <Header />}
       <main>
         <Routes>
-          <Route path="/ControlARPreview" element={<Login />} />
+          <Route path="/ControlARPreview/" element={<Login />} />
           <Route path="/esqueci-senha" element={<EsqueciSenha />} />
           <Route path="/home" element={<Home />} />
           <Route path="/manutencao" element={<Manutencao />} />
