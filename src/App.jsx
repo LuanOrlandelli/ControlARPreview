@@ -10,14 +10,14 @@ import Header from './Header.jsx'
 
 function App() {
   const location = useLocation()
-  const semCabecalho = location.pathname === '/' || location.pathname === '/esqueci-senha'
+  const semCabecalho = location.pathname === '/ControlARPreview' || location.pathname === '/esqueci-senha'
 
   return (
     <>
       {!semCabecalho && <Header />}
       <main>
         <Routes>
-          <Route path="/ControlARPreview/" element={<Login />} />
+          <Route path="/ControlARPreview" element={<Login />} />
           <Route path="/esqueci-senha" element={<EsqueciSenha />} />
           <Route path="/home" element={<Home />} />
           <Route path="/manutencao" element={<Manutencao />} />
