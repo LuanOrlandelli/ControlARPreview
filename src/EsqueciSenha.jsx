@@ -20,8 +20,9 @@ function EsqueciSenha() {
     event.preventDefault()
     const codigo = Math.floor(100000 + Math.random() * 900000).toString()
     setCodigoGerado(codigo)
+    setCodigoDigitado('')
     setEtapa(2)
-    console.log(codigoGerado)
+    console.log('[RECUPERACAO] Codigo gerado:', codigo)
   }
 
   const validarCodigo = (event) => {
