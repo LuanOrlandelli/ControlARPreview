@@ -77,12 +77,12 @@ function Header() {
               className={`PerfilMenuMobile ${perfilAberto ? 'PerfilAberto' : ''}`}
             >
               <button className='PerfilItem' type="button" onClick={fecharMenu}>Meu perfil</button>
-              <button className='PerfilItem' type="button" onClick={fecharMenu}>Configuracoes</button>
+              <button className='PerfilItem' type="button" onClick={fecharMenu}>Configurações</button>
               <button className='PerfilItem' type="button" onClick={sair}>Sair</button>
             </div>
           </div>
           <Link to="/manutencao" onClick={() => { fecharMenu(); fecharPerfil() }}>
-            <h2>Manutencao</h2>
+            <h2>Manutenção</h2>
           </Link>
           <Link to="/limpeza" onClick={() => { fecharMenu(); fecharPerfil() }}>
             <h2>Limpeza</h2>

@@ -3,7 +3,9 @@ import './style.css'
 function Home() {
   return (
     <>
-      <h2>Bem-vindo ao AR Control</h2>
+      <section className="HomeContainer">
+        <h1 className="HomeTitulo">Bem Vindo ao Control AR</h1>
+      </section>
     </>
   )
 }

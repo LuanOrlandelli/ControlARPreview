@@ -98,6 +98,23 @@ body{
     padding: 0;
 }
 
+.HomeContainer {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+}
+
+.HomeTitulo {
+    margin: 0;
+    color: var(--cor-primaria);
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
 @media (max-width: 611px) {
     .LoginPage {
         gap: 8rem;
