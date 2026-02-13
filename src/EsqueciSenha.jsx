@@ -8,6 +8,8 @@ function EsqueciSenha() {
   const [etapa, setEtapa] = useState(1)
   const [codigoGerado, setCodigoGerado] = useState('')
   const [codigoDigitado, setCodigoDigitado] = useState('')
+  const [novaSenha, setNovaSenha] = useState('')
+  const [confirmarSenha, setConfirmarSenha] = useState('')
 
   const voltarLogin = (event) => {
     if (event) {
@@ -36,6 +38,10 @@ function EsqueciSenha() {
 
   const trocarSenha = (event) => {
     event.preventDefault()
+    if (novaSenha !== confirmarSenha) {
+      alert('As senhas precisam ser iguais.')
+      return
+    }
     setEtapa(4)
   }
 
@@ -82,11 +88,23 @@ function EsqueciSenha() {
               <h3 className="LoginSubTitulo">Crie sua nova senha.</h3>
               <label className="LoginField">
                 Nova senha
-                <input type="password" placeholder="********" required />
+                <input
+                  type="password"
+                  placeholder="********"
+                  value={novaSenha}
+                  onChange={(event) => setNovaSenha(event.target.value)}
+                  required
+                />
               </label>
               <label className="LoginField">
                 Confirmar senha
-                <input type="password" placeholder="********" required />
+                <input
+                  type="password"
+                  placeholder="********"
+                  value={confirmarSenha}
+                  onChange={(event) => setConfirmarSenha(event.target.value)}
+                  required
+                />
               </label>
               <button className="LoginButton" type="submit">Salvar senha</button>
             </form>
